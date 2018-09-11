@@ -28,29 +28,53 @@ Example:
 POSSIBLIE USAGES: (Javascript)
 
 // Get select options for a pulldown for all the countries
+
 function countrySelect(){
-  var o = '';
-  for(var i=0;i<cs.length;i++){ o += '<option value="' + cs[i][1] + '">' + cs[i][0] + '</option>'; }
-  return o;
+
+ var o = '';
+
+ for(var i=0;i<cs.length;i++){ o += '<option value="' + cs[i][1] + '">' + cs[i][0] + '</option>'; }
+
+ return o;
+
 }
+
 // Get pulldown list for a countries states/regions Pass: ( Country )
+
 function stateSelect(s){
-  var o = '';
-  for(var i=0;i<cs.length;i++){ 
-    if(s == cs[i][1]){
-      for(var ii=0;ii<cs[i][4].length;ii++){ o += '<option value="' + cs[i][4][ii][1] + '">' + cs[i][4][ii][1] + '</option>'; }
-      return o;
-    } 
-  }
+
+ var o = '';
+
+ for(var i=0;i<cs.length;i++){ 
+
+ if(s == cs[i][1]){
+
+  for(var ii=0;ii<cs[i][4].length;ii++){ o += '<option value="' + cs[i][4][ii][1] + '">' + cs[i][4][ii][1] + '</option>'; }
+
+  return o;
+
+  } 
+
+ }
+
 }
+
 // Verify the selected state/region exists for a perticular country. Pass: ( Country, State )
+
 function verifyState(s,ss){
-  for(var i=0;i<cs.length;i++){
-    if(s == cs[i][1]){
-      for(var ii=0;ii<cs[i][4].length;ii++){ if(cs[i][4][ii][1]==ss){return true;} }
-    } 
-  }
-  return false;
+
+ for(var i=0;i<cs.length;i++){
+
+  if(s == cs[i][1]){
+
+   for(var ii=0;ii<cs[i][4].length;ii++){ if(cs[i][4][ii][1]==ss){return true;} }
+
+  } 
+
+ }
+
+ return false;
+
 }
 
 
