@@ -45,13 +45,14 @@ function stateSelect(s){
 }
 // Verify the selected state/region exists for a perticular country. Pass: ( Country, State )
 function verifyState(s,ss){
-  for(var i=0;i<cs.length;i++){ 
+  for(var i=0;i<cs.length;i++){
     if(s == cs[i][1]){
       for(var ii=0;ii<cs[i][4].length;ii++){ if(cs[i][4][ii][1]==ss){return true;} }
     } 
   }
   return false;
 }
+
 
 
 
